@@ -21,7 +21,7 @@ class NodeTransSession extends EventEmitter {
     let vc = this.conf.vc || 'copy';
     let ac = this.conf.ac || 'copy';
     let hlsPath = this.conf.hlsroot || this.conf.mediaroot;
-    let inPath = 'rtmp://127.0.0.1:' + this.conf.rtmpPort + this.conf.streamPath;
+    let inPath = 'rtmp://127.0.0.1:' + this.conf.rtmpPort + this.conf.streamPath + '?client=local&purpose=record&secret=dexter';
     let ouPath = `${this.conf.mediaroot}/${this.conf.streamApp}/${this.conf.streamName}`;
     let ouHlsPath = `${hlsPath}/${this.conf.streamApp}/${this.conf.streamName}`;
     let mapStr = '';
